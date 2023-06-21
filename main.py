@@ -65,14 +65,14 @@ organizations = [
     {
         'organisation_name': 'Альфа-Банк',
         'service_name': 'Потребительские кредиты',
-        'service_link': 'https://www.sberbank.com/ru/person/credits/money',
+        'service_link': 'https://alfabank.ru/get-money/',
         'mobile_service_link': 'https://business.auth.alfabank.ru/passport/cerberus-mini-blue/dashboard-blue/corp-username?response_type=code&client_id=corp-albo&scope=openid%20corp-albo&acr_values=corp-username&non_authorized_user=true',
     },
     {
-        'organisation_name': 'Тинькофф_Банк',
-        'service_name': 'Кредиты на любые цели',
-        'service_link': 'https://www.tinkoff.ru/loans/',
-        'mobile_service_link': 'https://id.tinkoff.ru/auth/step?cid=JhuiNiyc8AYI',
+        'organisation_name': 'СитиБанк',
+        'service_name': 'Кредит наличными',
+        'service_link': 'https://www.citibank.ru/russia/loan/rus/loan.htm',
+        'mobile_service_link': 'https://www.citibank.ru/RUGCB/JSO/signon/flow.action?locale=ru_RU',
     },
     {
         'organisation_name': 'Банк Открытие',
@@ -126,9 +126,9 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
     :param day:
     :param organisation: dict with 4 field with information of organisation
     """
-    timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
+    timeout, sleep_time, connection_error_time, error_count = 4, 10, 0, 0
     while True:
-        if time.time() - start_time >= 86400:
+        if time.time() - start_time >= 150:
             break
         now = datetime.now()
         try:
@@ -148,7 +148,7 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
 
         except requests.exceptions.RequestException as e:
             error_count += 1
-            connection_error_time += 7
+            connection_error_time += 9
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['service_link']} - {now} - {e}"
                 send_telegram_message(message)
@@ -166,9 +166,9 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
     :param organisation: dict with 4 field with information of organisation
     :return:
     """
-    timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
+    timeout, sleep_time, connection_error_time, error_count = 4, 10, 0, 0
     while True:
-        if time.time() - start_time >= 86400:
+        if time.time() - start_time >= 150:
             break
         now = datetime.now()
         try:
@@ -188,7 +188,7 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
 
         except requests.exceptions.RequestException as e:
             error_count += 1
-            connection_error_time += 7
+            connection_error_time += 9
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['mobile_service_link']} - {now} - {e}"
                 send_telegram_message(message)
@@ -317,13 +317,11 @@ def main():
                                           args=(organizations[i], 1, time.time()))
         process.start()
         processes.append(process)
-        print(i)
 
         process = multiprocessing.Process(target=check_organisation_mobile_service_link,
                                           args=(organizations[i], 1, time.time()))
         process.start()
         processes.append(process)
-        print(i)
 
     for process in processes:
         process.join()
