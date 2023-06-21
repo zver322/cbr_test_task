@@ -7,6 +7,7 @@ from pathlib import Path
 import os
 import multiprocessing
 import csv
+import asyncio
 
 
 # Here stores Telegram Info
@@ -21,7 +22,7 @@ def get_telegram_info_from_config(path: str) -> [str, str]:
         return config['telegram_token'], config['telegram_chat_id']
 
 
-def send_telegram_message(message: str) -> None:
+async def send_telegram_message(message: str) -> None:
     """
     Function for sending messages into Telegram channel
     :param message: sending message
@@ -119,14 +120,14 @@ organizations = [
 ]
 
 
-def check_organisation_service_link(organisation: dict, day: int, start_time: float) -> None:
+async def check_organisation_service_link(organisation: dict, day: int, start_time: float) -> None:
     """
     Function which checks connection to organisation service
     :param start_time:
     :param day:
     :param organisation: dict with 4 field with information of organisation
     """
-    timeout, sleep_time, connection_error_time, error_count = 4, 10, 0, 0
+    timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
         if time.time() - start_time >= 150:
             break
@@ -136,11 +137,11 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
             if connection_error_time != 0:
                 error_count = 0
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['service_link']} - {now} - Восстановление"
-                send_telegram_message(message)
-                f = open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
-                b = open(f"logs{day}/website/total_time_errors_{organisation['organisation_name']}.txt", "a")
-                b.write(f'{str(connection_error_time)}\n')
+                await send_telegram_message(message)
+                with open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
+                with open(f"logs{day}/website/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
                 connection_error_time, sleep_time = 0, 10
 
             # if status_code:
@@ -148,17 +149,17 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
 
         except requests.exceptions.RequestException as e:
             error_count += 1
-            connection_error_time += 9
+            connection_error_time += 7
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['service_link']} - {now} - {e}"
-                send_telegram_message(message)
-                f = open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
+                await send_telegram_message(message)
+                with open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
             sleep_time = 5
-        time.sleep(sleep_time)
+        await asyncio.sleep(sleep_time)
 
 
-def check_organisation_mobile_service_link(organisation: dict, day: int, start_time: float) -> None:
+async def check_organisation_mobile_service_link(organisation: dict, day: int, start_time: float) -> None:
     """
     Function which checks connection to organisation authentication service
     :param start_time:
@@ -166,7 +167,7 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
     :param organisation: dict with 4 field with information of organisation
     :return:
     """
-    timeout, sleep_time, connection_error_time, error_count = 4, 10, 0, 0
+    timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
         if time.time() - start_time >= 150:
             break
@@ -176,11 +177,11 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
             if connection_error_time != 0:
                 error_count = 0
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['mobile_service_link']} - {now} - Восстановление"
-                send_telegram_message(message)
-                f = open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
-                b = open(f"logs{day}/mobile/total_time_errors_{organisation['organisation_name']}.txt", "a")
-                b.write(f'{str(connection_error_time)}\n')
+                await send_telegram_message(message)
+                with open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
+                with open(f"logs{day}/mobile/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
                 connection_error_time, sleep_time = 0, 10
 
             # if status_code:
@@ -188,14 +189,14 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
 
         except requests.exceptions.RequestException as e:
             error_count += 1
-            connection_error_time += 9
+            connection_error_time += 7
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['mobile_service_link']} - {now} - {e}"
-                send_telegram_message(message)
-                f = open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
+                await send_telegram_message(message)
+                with open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
             sleep_time = 5
-        time.sleep(sleep_time)
+        await asyncio.sleep(sleep_time)
 
 
 def create_files_for_logs(day: int) -> None:
@@ -309,24 +310,15 @@ def generate_report(day: int):
     send_telegram_csv_document(f"report_{day}.csv")
 
 
-def main():
-    create_files_for_logs(1)
-    processes = []
-    for i in range(len(organizations)):
-        process = multiprocessing.Process(target=check_organisation_service_link,
-                                          args=(organizations[i], 1, time.time()))
-        process.start()
-        processes.append(process)
-
-        process = multiprocessing.Process(target=check_organisation_mobile_service_link,
-                                          args=(organizations[i], 1, time.time()))
-        process.start()
-        processes.append(process)
-
-    for process in processes:
-        process.join()
-    generate_report(1)
-
+async def run_async_tasks():
+    tasks = []
+    for organisation in organizations:
+        task1 = asyncio.create_task(check_organisation_service_link(organisation, 1, time.time()))
+        task2 = asyncio.create_task(check_organisation_mobile_service_link(organisation, 1, time.time()))
+        tasks.extend([task1, task2])
+    await asyncio.gather(*tasks)
 
 if __name__ == '__main__':
-    main()
+    create_files_for_logs(1)
+    asyncio.run(run_async_tasks())
+    generate_report(1)
