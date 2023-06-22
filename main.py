@@ -2,12 +2,12 @@ import requests
 import time
 import pandas as pd
 import yaml
-from datetime import datetime
 from pathlib import Path
 import os
 import threading
 import csv
 import logging
+from datetime import datetime
 
 
 # Here stores Telegram Info
@@ -53,7 +53,7 @@ def send_telegram_csv_document(file) -> None:
 
 path_to_config = 'config.yml'
 telegram_token, telegram_chat_id = get_telegram_info_from_config(path_to_config)
-# 'service_link': 'http://127.0.0.1:5000/',
+logging.basicConfig(level=logging.INFO)
 
 # List of bank organisations and its services.
 organizations = [
@@ -119,8 +119,6 @@ organizations = [
     }
 ]
 
-logging.basicConfig(level=logging.INFO)
-
 
 def check_organisation_service_link(organisation: dict, day: int, start_time: float) -> None:
     """
@@ -131,7 +129,7 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
-        if time.time() - start_time >= 86400:
+        if time.time() - start_time >= 1800:
             break
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         try:
@@ -171,7 +169,7 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
-        if time.time() - start_time >= 86400:
+        if time.time() - start_time >= 1800:
             break
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         try:
@@ -314,8 +312,12 @@ def generate_report(day: int):
 
 
 def main():
+    """
+    Main function which launches program and create threads
+    :return:
+    """
     create_files_for_logs(1)
-    #check_organisation_service_link(organizations[2], 1, time.time())
+    # check_organisation_service_link(organizations[2], 1, time.time())
     threads = []
     for organisation in organizations:
         a = threading.Thread(target=check_organisation_service_link, args=(organisation, 1, time.time()))
