@@ -70,10 +70,10 @@ organizations = [
         'mobile_service_link': 'https://business.auth.alfabank.ru/passport/cerberus-mini-blue/dashboard-blue/corp-username?response_type=code&client_id=corp-albo&scope=openid%20corp-albo&acr_values=corp-username&non_authorized_user=true',
     },
     {
-        'organisation_name': 'Тинькофф_Банк',
-        'service_name': 'Кредиты на любые цели',
-        'service_link': 'https://www.tinkoff.ru/loans/',
-        'mobile_service_link': 'https://id.tinkoff.ru/auth/step?cid=JhuiNiyc8AYI',
+        'organisation_name': 'ВБРР',
+        'service_name': 'Потребительские кредиты',
+        'service_link': 'https://www.vbrr.ru/private/credits/loan/',
+        'mobile_service_link': 'https://online.vbrr.ru/#/',
     },
     {
         'organisation_name': 'Банк Открытие',
@@ -129,7 +129,10 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
-        if time.time() - start_time >= 1800:
+        if time.time() - start_time >= 86400:
+            if connection_error_time != 0:
+                with open(f"logs{day}/website/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
             break
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         try:
@@ -141,10 +144,10 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
                 error_count = 0
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['service_link']} - {now} - Восстановление"
                 send_telegram_message(message)
-                f = open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
-                b = open(f"logs{day}/website/total_time_errors_{organisation['organisation_name']}.txt", "a")
-                b.write(f'{str(connection_error_time)}\n')
+                with open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
+                with open(f"logs{day}/website/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
                 connection_error_time, sleep_time = 0, 10
 
         except requests.exceptions.RequestException as e:
@@ -154,8 +157,8 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['service_link']} - {now} - {e}"
                 send_telegram_message(message)
-                f = open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
+                with open(f"logs{day}/website/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
             sleep_time = 5
         time.sleep(sleep_time)
 
@@ -169,7 +172,10 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
-        if time.time() - start_time >= 1800:
+        if time.time() - start_time >= 86400:
+            if connection_error_time != 0:
+                with open(f"logs{day}/mobile/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
             break
         now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         try:
@@ -181,10 +187,10 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
                 error_count = 0
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['mobile_service_link']} - {now} - Восстановление"
                 send_telegram_message(message)
-                f = open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
-                b = open(f"logs{day}/mobile/total_time_errors_{organisation['organisation_name']}.txt", "a")
-                b.write(f'{str(connection_error_time)}\n')
+                with open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
+                with open(f"logs{day}/mobile/total_time_errors_{organisation['organisation_name']}.txt", "a") as b:
+                    b.write(f'{str(connection_error_time)}\n')
                 connection_error_time, sleep_time = 0, 10
 
         except requests.exceptions.RequestException as e:
@@ -194,8 +200,8 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
             if error_count == 1:
                 message = f"{organisation['organisation_name']} - {organisation['service_name']} - {organisation['mobile_service_link']} - {now} - {e}"
                 send_telegram_message(message)
-                f = open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a")
-                f.write(f'{message}\n')
+                with open(f"logs{day}/mobile/errors_{organisation['organisation_name']}.txt", "a") as f:
+                    f.write(f'{message}\n')
             sleep_time = 5
         time.sleep(sleep_time)
 
@@ -317,7 +323,7 @@ def main():
     :return:
     """
     create_files_for_logs(1)
-    # check_organisation_service_link(organizations[2], 1, time.time())
+    # check_organisation_service_link(organizations[4], 1, time.time())
     threads = []
     for organisation in organizations:
         a = threading.Thread(target=check_organisation_service_link, args=(organisation, 1, time.time()))
