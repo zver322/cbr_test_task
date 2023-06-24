@@ -7,7 +7,6 @@ import os
 import threading
 import csv
 import logging
-from datetime import datetime
 
 
 # Here stores Telegram Info
@@ -41,12 +40,13 @@ def send_telegram_csv_document(file) -> None:
     :param file: sending file
     """
     base_url = f"https://api.telegram.org/bot{telegram_token}/sendDocument"
+    my_file = open(f"{file}", "rb")
     parameters = {
         "chat_id": telegram_chat_id,
         "caption": "This is daily report"
     }
     files = {
-        "document": file
+        "document": my_file
     }
     requests.get(base_url, data=parameters, files=files)
 
@@ -317,24 +317,28 @@ def generate_report(day: int):
     send_telegram_csv_document(f"report_{day}.csv")
 
 
+
+
+
 def main():
     """
     Main function which launches program and create threads
     :return:
     """
-    create_files_for_logs(1)
-    # check_organisation_service_link(organizations[4], 1, time.time())
+    day = 2
+    create_files_for_logs(day)
+    check_organisation_mobile_service_link(organizations[2], 2, time.time())
     threads = []
     for organisation in organizations:
-        a = threading.Thread(target=check_organisation_service_link, args=(organisation, 1, time.time()))
-        b = threading.Thread(target=check_organisation_mobile_service_link, args=(organisation, 1, time.time()))
+        a = threading.Thread(target=check_organisation_service_link, args=(organisation, day, time.time()))
+        b = threading.Thread(target=check_organisation_mobile_service_link, args=(organisation, day, time.time()))
         threads.append(a)
         threads.append(b)
         a.start()
         b.start()
     for t in threads:
         t.join()
-    generate_report(1)
+    generate_report(day)
 
 
 if __name__ == '__main__':
