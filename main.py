@@ -9,12 +9,18 @@ import csv
 import logging
 
 
-# Here stores Telegram Info
 def get_telegram_info_from_config(path: str) -> [str, str]:
     """
-    Function which gets telegram token and telegram id from config file
-    :param path: route to config file
-    :return: [telegram_token, telegram_chat_id]
+    Функция, работающая с config.yml файлом для получения chat_id
+    и telegram_token бота. Данная функция нужна, чтобы нельзя было
+    в GitHub прочитать token и chat_id, так как они в виде str
+    хранятся в конфиге, которы не загружается на GitHub.
+
+    Args:
+        path (str): Путь до config.yml
+
+    Returns:
+        [str, str]: telegram_token и chat_id
     """
     with open(path) as file:
         config = yaml.safe_load(file)
@@ -23,8 +29,14 @@ def get_telegram_info_from_config(path: str) -> [str, str]:
 
 def send_telegram_message(message: str) -> None:
     """
-    Function for sending messages into Telegram channel
-    :param message: sending message
+    Функция, отправляющая сообщение с помощью telegram_token
+    в чат с chat_id  с помощью GET метода.
+
+    Args:
+        message (str): Сообщение, которое будет отправлено в Telegram
+
+    Returns:
+        None
     """
     base_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
     parameters = {
@@ -36,8 +48,13 @@ def send_telegram_message(message: str) -> None:
 
 def send_telegram_csv_document(file) -> None:
     """
-    Function for sending daily report
-    :param file: sending file
+    Функция, отправляющая ежедневный отчет формата .csv в Telegram
+
+    Args:
+        file: Путь до отчет.csv
+
+    Returns:
+        None
     """
     base_url = f"https://api.telegram.org/bot{telegram_token}/sendDocument"
     my_file = open(f"{file}", "rb")
@@ -55,7 +72,7 @@ path_to_config = 'config.yml'
 telegram_token, telegram_chat_id = get_telegram_info_from_config(path_to_config)
 logging.basicConfig(level=logging.INFO)
 
-# List of bank organisations and its services.
+# Список организаций.
 organizations = [
     {
         'organisation_name': 'Сбербанк',
@@ -122,10 +139,21 @@ organizations = [
 
 def check_organisation_service_link(organisation: dict, day: int, start_time: float) -> None:
     """
-    Function which checks connection to organisation service
-    :param start_time:
-    :param day:
-    :param organisation: dict with 4 field with information of organisation
+    Функция, которая проверяет доступность ссылки веб-сайта, каждые 10 секунд, если выдается ошибка, то
+    тогда проверяется тогда ссылка, проверяется, каждые 5 секунд. Данные события также записываются
+    в текстовые файлы в определенном формате, чтобы потом можно было из них сделать отчет. Данная функция
+    включает в себя бесконечный цикл, который прерывается после того как проходит 24 часа. В случае возникновения
+    ошибки приходит сообщение в телеграм, когда работа сервиса восстанавливается, то приходит сообщение о восстановлении.
+    Также, чтобы не присылать только первое уведомление, что произошел сбой, а затем только при восстановлении была
+    сделана условная конструкция. Также в ходе работы логи выводятся в консоль.
+
+    Args:
+        organisation (dict): Словарь вида {наименование организации: "str", наименование сервиса: "str",
+                                           ссылка на веб-сайт: "str", ссылка на мобильное приложение: "str"}
+        day (int): День, для которого формируется отчет. То есть день 1, день 2 и т.п.
+        start_time (float): Начальное время, которые используется для засечения таймера на 24 часа
+    Returns:
+        None
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
@@ -165,10 +193,21 @@ def check_organisation_service_link(organisation: dict, day: int, start_time: fl
 
 def check_organisation_mobile_service_link(organisation: dict, day: int, start_time: float) -> None:
     """
-    Function which checks connection to organisation authentication service
-    :param start_time:
-    :param day:
-    :param organisation: dict with 4 field with information of organisation
+    Функция, которая проверяет доступность ссылки аутентификации, каждые 10 секунд, если выдается ошибка, то
+    тогда проверяется тогда ссылка, проверяется, каждые 5 секунд. Данные события также записываются
+    в текстовые файлы в определенном формате, чтобы потом можно было из них сделать отчет. Данная функция
+    включает в себя бесконечный цикл, который прерывается после того как проходит 24 часа. В случае возникновения
+    ошибки приходит сообщение в телеграм, когда работа сервиса восстанавливается, то приходит сообщение о восстановлении.
+    Также, чтобы не присылать только первое уведомление, что произошел сбой, а затем только при восстановлении была
+    сделана условная конструкция. Также в ходе работы логи выводятся в консоль.
+
+    Args:
+        organisation (dict): Словарь вида {наименование организации: "str", наименование сервиса: "str",
+                                           ссылка на веб-сайт: "str", ссылка на мобильное приложение: "str"}
+        day (int): День, для которого формируется отчет. То есть день 1, день 2 и т.п.
+        start_time (float): Начальное время, которые используется для засечения таймера на 24 часа
+    Returns:
+        None
     """
     timeout, sleep_time, connection_error_time, error_count = 2, 10, 0, 0
     while True:
@@ -208,8 +247,14 @@ def check_organisation_mobile_service_link(organisation: dict, day: int, start_t
 
 def create_files_for_logs(day: int) -> None:
     """
-    Function which creates log files for errors and total_time_errors
-    :param: day counter
+    Функция, создающая папку log{day}/, в которой хранятся логи работы
+    вебсайта и ссылки на аутентификацию
+
+    Args:
+        day (int): День, для которого формируется отчет. То есть день 1, день 2 и т.п.
+
+    Returns:
+        None
     """
     if not os.path.exists(f'logs{day}'):
         os.mkdir(f'logs{day}')
@@ -232,11 +277,22 @@ def create_files_for_logs(day: int) -> None:
         b = open(b, "w+")
 
 
-def generate_report(day: int):
+def generate_report(day: int) -> None:
     """
-    Function, which generates daily report
-    :param day: the number of days
-    :return: .csv format file
+    Функция, которая генерирует отчет и отправляет его в Telegram канал. Отчет формируется в формате .csv
+    таблицы. Содержит в себе по вертикали 10 строк, которые представляют отчетность работы сервиса кампании.
+    Столбцы имеют название: перечень организаций, uptime сайта, uptime мобильного приложения, время недоступности сайта,
+    время недоступности мобильного приложения, суммарное время недоступности сервиса.
+    Пояснение: uptime - результат деления времени непрерывной работы на время в сутках умноженное на 100 с точностью до
+    2 знаков после запятой, например: 99,98%
+    Пояснение:   время недоступности конкретного сервиса в формате – «Наименование сервиса – timestamp прекращения
+    работы сервиса – timestamp восстановления работы сервиса – timestamp прекращения работы сервиса»
+
+    Args:
+        day (int): День, для которого формируется отчет. То есть день 1, день 2 и т.п.
+
+    Returns:
+        None
     """
     organisation_names = []
     for organisation in organizations:
@@ -317,17 +373,17 @@ def generate_report(day: int):
     send_telegram_csv_document(f"report_{day}.csv")
 
 
-
-
-
-def main():
+def main() -> None:
     """
-    Main function which launches program and create threads
-    :return:
+    Основная функция, которая запускает всю программу. Она создает 20 потоков, которые параллельно
+    ведут в течение 24 часов мониторинг и отправляют уведомления в Telegram. Программа ждет, когда
+    закончатся все потоки, чтобы сформировать ежедневный отчет.
+
+    Returns:
+        None
     """
     day = 2
     create_files_for_logs(day)
-    check_organisation_mobile_service_link(organizations[2], 2, time.time())
     threads = []
     for organisation in organizations:
         a = threading.Thread(target=check_organisation_service_link, args=(organisation, day, time.time()))
