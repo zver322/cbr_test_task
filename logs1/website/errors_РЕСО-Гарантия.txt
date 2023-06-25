@@ -1,0 +1,2 @@
+РЕСО-Гарантия - Туристическая страховка - https://reso.ru/individual/travel/ - 2023-06-24 11:01:38 - HTTPSConnectionPool(host='reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://reso.ru/individual/travel/ - 2023-06-24 11:02:26 - Восстановление

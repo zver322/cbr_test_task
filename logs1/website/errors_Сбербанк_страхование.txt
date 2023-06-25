@@ -1,0 +1,4 @@
+Сбербанк_страхование - Страхование путешественников - https://sberbankins.ru/products/travel-online/ - 2023-06-23 13:42:46 - HTTPSConnectionPool(host='sberbankins.ru', port=443): Read timed out. (read timeout=2)
+Сбербанк_страхование - Страхование путешественников - https://sberbankins.ru/products/travel-online/ - 2023-06-23 13:42:54 - Восстановление
+Сбербанк_страхование - Страхование путешественников - https://sberbankins.ru/products/travel-online/ - 2023-06-24 01:00:01 - HTTPSConnectionPool(host='sberbankins.ru', port=443): Read timed out. (read timeout=2)
+Сбербанк_страхование - Страхование путешественников - https://sberbankins.ru/products/travel-online/ - 2023-06-24 01:00:37 - Восстановление

@@ -1,0 +1,1 @@
+ВТБ - Потребительские кредиты - https://online.vtb.ru/login - 2023-06-24 16:54:03 - HTTPSConnectionPool(host='online.vtb.ru', port=443): Read timed out. (read timeout=2)

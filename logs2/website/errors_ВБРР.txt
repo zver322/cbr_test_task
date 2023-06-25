@@ -1,0 +1,6 @@
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 22:44:28 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Max retries exceeded with url: /private/credits/loan/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fbdce1863d0>, 'Connection to www.vbrr.ru timed out. (connect timeout=2)'))
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 22:44:36 - Восстановление
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-25 04:40:22 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-25 04:40:36 - Восстановление
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-25 04:42:09 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-25 04:42:17 - Восстановление

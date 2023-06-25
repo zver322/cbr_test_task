@@ -1,0 +1,6 @@
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 15:53:20 - HTTPSConnectionPool(host='lk.renins.ru', port=443): Max retries exceeded with url: /login (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f13f9743310>, 'Connection to lk.renins.ru timed out. (connect timeout=2)'))
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 15:53:27 - Восстановление
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 16:13:59 - HTTPSConnectionPool(host='lk.renins.ru', port=443): Read timed out. (read timeout=2)
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 16:14:07 - Восстановление
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 17:45:05 - HTTPSConnectionPool(host='lk.renins.ru', port=443): Read timed out.
+Ренессанс_страхование - Онлайн страхование путешественников - https://lk.renins.ru/login - 2023-06-23 17:45:12 - Восстановление

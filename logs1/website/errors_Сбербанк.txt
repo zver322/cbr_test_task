@@ -1,0 +1,2 @@
+Сбербанк - Кредиты на любые цели - https://www.sberbank.com/ru/person/credits/money - 2023-06-24 12:06:33 - HTTPSConnectionPool(host='www.sberbank.com', port=443): Max retries exceeded with url: /ru/person/credits/money (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f13fb4fb590>, 'Connection to www.sberbank.com timed out. (connect timeout=2)'))
+Сбербанк - Кредиты на любые цели - https://www.sberbank.com/ru/person/credits/money - 2023-06-24 12:06:45 - Восстановление

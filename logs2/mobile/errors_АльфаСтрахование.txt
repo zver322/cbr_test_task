@@ -1,0 +1,12 @@
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-24 20:27:58 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-24 20:28:05 - Восстановление
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 07:30:08 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 07:30:15 - Восстановление
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 10:12:43 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 10:12:51 - Восстановление
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 10:31:03 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 10:31:10 - Восстановление
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 14:07:28 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 14:07:35 - Восстановление
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 14:27:08 - HTTPSConnectionPool(host='www.alfastrah.ru', port=443): Read timed out. (read timeout=2)
+АльфаСтрахование - Туристическая страховка - https://www.alfastrah.ru/login/ - 2023-06-25 14:27:15 - Восстановление

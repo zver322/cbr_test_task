@@ -1,0 +1,26 @@
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-24 18:11:02 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-24 18:11:10 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-24 23:37:10 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-24 23:37:25 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 10:27:30 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 10:27:37 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 10:54:49 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 10:54:56 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 11:07:08 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 11:07:15 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 11:33:43 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 11:33:50 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:24:18 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:24:25 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:31:35 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:31:43 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:47:04 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 12:47:11 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 13:34:17 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 13:34:25 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 13:45:36 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 13:45:43 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 14:05:07 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 14:05:14 - Восстановление
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 16:00:26 - HTTPSConnectionPool(host='client.reso.ru', port=443): Read timed out. (read timeout=2)
+РЕСО-Гарантия - Туристическая страховка - https://client.reso.ru/wp-reso-ru/login.xhtml - 2023-06-25 16:00:33 - Восстановление

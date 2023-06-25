@@ -1,0 +1,2 @@
+Сбербанк - Кредиты на любые цели - https://online.sberbank.ru/CSAFront/index.do - 2023-06-24 22:48:02 - HTTPSConnectionPool(host='online.sberbank.ru', port=443): Read timed out. (read timeout=2)
+Сбербанк - Кредиты на любые цели - https://online.sberbank.ru/CSAFront/index.do - 2023-06-24 22:48:10 - Восстановление

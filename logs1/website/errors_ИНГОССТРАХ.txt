@@ -1,0 +1,34 @@
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:29:02 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:29:31 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:31:25 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:31:46 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:32:21 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:32:49 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:34:56 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:35:32 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:36:34 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:37:03 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:40:52 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:41:21 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:44:07 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 14:44:35 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:13:56 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:14:03 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:17:09 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:17:31 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:21:07 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:21:22 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:57:32 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 15:57:46 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:03:25 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:03:53 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:21:03 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:21:18 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:52:22 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 16:52:29 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 17:01:52 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out.
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 17:02:00 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 18:12:26 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-23 18:12:33 - Восстановление
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-24 01:56:16 - HTTPSConnectionPool(host='www.ingos.ru', port=443): Read timed out. (read timeout=2)
+ИНГОССТРАХ - Страхование для путешествия за границу - https://www.ingos.ru/travel/abroad - 2023-06-24 01:56:23 - Восстановление

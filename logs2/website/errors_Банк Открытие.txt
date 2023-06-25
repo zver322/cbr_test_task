@@ -1,0 +1,12 @@
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-24 22:00:48 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-24 22:00:55 - Восстановление
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 11:07:56 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 11:08:03 - Восстановление
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 13:34:16 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 13:34:24 - Восстановление
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:37:17 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:37:24 - Восстановление
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:38:06 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:38:14 - Восстановление
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:38:24 - HTTPSConnectionPool(host='www.open.ru', port=443): Read timed out. (read timeout=2)
+Банк Открытие - Кредит на любые цели - https://www.open.ru/credits/cash?from=main_menu - 2023-06-25 14:38:32 - Восстановление

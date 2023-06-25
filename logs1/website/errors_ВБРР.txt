@@ -1,0 +1,8 @@
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 00:14:45 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 00:15:00 - Восстановление
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 00:31:09 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 00:31:16 - Восстановление
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 08:18:37 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 08:18:44 - Восстановление
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 09:52:12 - HTTPSConnectionPool(host='www.vbrr.ru', port=443): Read timed out. (read timeout=2)
+ВБРР - Потребительские кредиты - https://www.vbrr.ru/private/credits/loan/ - 2023-06-24 09:52:19 - Восстановление

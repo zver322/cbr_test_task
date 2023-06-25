@@ -1,0 +1,6 @@
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-24 20:15:42 - HTTPSConnectionPool(host='www.renins.ru', port=443): Read timed out. (read timeout=2)
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-24 20:15:50 - Восстановление
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-25 01:10:04 - HTTPSConnectionPool(host='www.renins.ru', port=443): Read timed out. (read timeout=2)
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-25 01:10:19 - Восстановление
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-25 15:28:46 - HTTPSConnectionPool(host='www.renins.ru', port=443): Read timed out. (read timeout=2)
+Ренессанс_страхование - Онлайн страхование путешественников - https://www.renins.ru/iris/di/process/travelinsurance/ZDM-200623-621#TravelSegmentationStep - 2023-06-25 15:29:01 - Восстановление
